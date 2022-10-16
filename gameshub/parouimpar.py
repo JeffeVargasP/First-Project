@@ -1,5 +1,8 @@
-from os import system
+from utils.utils import getSys
 from random import randint
+w = ''
+l = ''
+
 def par_ou_impar():
     v = 0
     print('\033[1;33m-='*30)
@@ -28,13 +31,9 @@ def par_ou_impar():
                 v += 1
             else:
                 print('\033[1;31mVocê perdeu!')
-            print('\033[1;33mVamos jogar novamente?')
         print('\033[1;33m-='*30)
         print('\033[1;31mGAME OVER! \033[1;mVocê \033[1;32mvenceu {} \033[1;mvez(es).'.format(v))
-        print('''
-        [ 1 ] Sair
-        ''')
-        choice = str(input('Digite 1 e pressione Enter... '))
-        if choice == '1':
-            system('cls')
-            break
+        print('pressione enter para continuar...')
+        input('')
+        getSys(w, l)
+        break

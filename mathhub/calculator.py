@@ -1,5 +1,10 @@
 from os import system
 import math
+from utils.utils import getSys
+
+w = ''
+l = ''
+
 def calc():
     cont = 0
     volt = continuar = True
@@ -10,21 +15,21 @@ def calc():
             print('='*80)
             print('''
                 [ 1 ] Somar     [ 2 ] Subtrair      [ 3 ] Multiplicar
-                [ 4 ] Dividir   [ 5 ] Raiz          [ 6 ] Log10
+                [ 4 ] Dividir   [ 5 ] Raiz          [ 6 ] Logaritmo
                 [ 7 ] Seno      [ 8 ] Cosseno       [ 9 ] Tangente
                 [10 ] Graus     [11 ] Radiano       [12 ] Pi
                                 [ s ] Sair
                             ''')
             print('='*80)
             inp = float(input('O que você deseja fazer?: '))
-            system('cls')
+            getSys(w, l)
         if (not(already_gone)):
 
             if (inp == 1):
                 num1 = float(input('Digite o primeiro numero: '))
                 num2 = float(input('Digite o segundo numero: '))
                 cont = num1 + num2
-                system('cls')
+                getSys(w, l)
                 print('O resultado da sua soma é: {}'.format(cont))
 
 
@@ -32,15 +37,15 @@ def calc():
                 num1 = float(input('Digite o primeiro numero: '))
                 num2 = float(input('Digite o segundo numero: '))
                 cont = num1 - num2
-                system('cls')
+                getSys(w, l)
                 print('O resultado da sua subtração é: {}'.format(cont))
 
 
             elif (inp == 3):
                 num1 = float(input('Digite o primeiro numero: '))
-                num2 = t(input('Digite o segundo numero: '))
+                num2 = float(input('Digite o segundo numero: '))
                 cont = num1 * num2
-                system('cls')
+                getSys(w, l)
                 print('O resultado da sua multiplicação é: {}'.format(cont))
 
 
@@ -48,7 +53,7 @@ def calc():
                 num1 = float(input('Digite o primeiro numero: '))
                 num2 = float(input('Digite o segundo numero: '))
                 cont = num1 / num2
-                system('cls')
+                getSys(w, l)
                 print('O resultado da sua divisão é: {}'.format(cont))
 
             elif (inp == 5):
@@ -101,28 +106,28 @@ def calc():
             if (inp == 1):
                 num1 = float(input('Digite o numero: '))
                 cont += num1
-                system('cls')
+                getSys(w, l)
                 print('O resultado da sua soma é: {}'.format(cont))
 
 
             elif (inp == 2):
                 num1 = float(input('Digite o numero: '))
                 cont -= num1
-                system('cls')
+                getSys(w, l)
                 print('O resultado da sua subtração é: {}'.format(cont))
 
 
             elif (inp == 3):
                 num1 = float(input('Digite o numero: '))
                 cont *= num1
-                system('cls')
+                getSys(w, l)
                 print('O resultado da sua multiplicação é: {}'.format(cont))
 
 
             elif (inp == 4):
                 num1 = float(input('Digite o numero: '))
                 cont /= num1
-                system('cls')
+                getSys(w, l)
                 print('O resultado da sua divisão é: {}'.format(cont))
 
             elif (inp == 5):
@@ -171,7 +176,7 @@ def calc():
 
         already_gone = True
         volt = False
-        nex = input('Deseja continuar?: ').upper()[0]
+        nex = input('Deseja continuar? [n/s]: ').upper()[0]
         if (nex == 'N'):
             print('='*80)
             print('''
@@ -191,4 +196,4 @@ def calc():
                 continuar = False
         if (nex == 'S'):
             volt = True
-        system('cls')
+        getSys(w, l)
